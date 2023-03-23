@@ -12,9 +12,10 @@ function onMutation(mutations) {
   for (var i = 0, tab; (tab = matchesTab[i]); i++) {
     tab.classList.add('open')
   }
-  for (var i = 0, tmHit; (tmHit = machineTranslationHits[i]); i++) {
-    if (tmHit.getAttribute("data-id") === "0") {
-      tmHit.style.display = "none"
-    }
-  }
 }
+
+window.addEventListener('load', function() {
+  const styleSheet = document.styleSheets[0];
+  styleSheet.insertRule('ul.suggestion-item:has(.per-yellow) {display: none;}');
+  styleSheet.insertRule('sugg-target graysmall-message {display: none;}'); // Hide the keyboard shortcut when we hide MT rows
+});
