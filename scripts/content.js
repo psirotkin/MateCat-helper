@@ -5,12 +5,11 @@ observer.observe(document, {
 });
 
 const matchesTab = document.getElementsByClassName('matches');
-const machineTranslationHits = document.getElementsByClassName('suggestion-item');
-// 
+const suggestionItems = document.getElementsByClassName('suggestion-item');
 
 function onMutation(mutations) {
   for (var i = 0, tab; (tab = matchesTab[i]); i++) {
-    tab.classList.add('open')
+    tab.classList.add('open');
   }
 }
 
