@@ -1,12 +1,28 @@
 {
   "manifest_version": 3,
   "name": "MateCat helper",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Changing the MateCat layout",
   "icons": {
     "128": "images/icon.png"
   },
-
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "commands": {
+    "yes": {
+      "description": "Select the primary button (OK)",
+      "suggested_key": {
+        "default": "Alt+Y"
+      }
+    },
+    "no": {
+      "description": "Select the secondary button (Cancel)",
+      "suggested_key": {
+        "default": "Alt+N"
+      }
+    }
+  },
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
