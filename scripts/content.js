@@ -7,7 +7,7 @@ observer.observe(document, {
 const matchesTab = document.getElementsByClassName('matches');
 const suggestionItems = document.getElementsByClassName('suggestion-item');
 const grayedOutColor = '#bbb';
-const primaryButtons = document.getElementsByClassName('ui primary button right floated');
+const primaryButtons = document.getElementsByClassName('ui primary button');
 const secondaryButtons = document.getElementsByClassName('ui button cancel-button');
 const okButtons = document.getElementsByClassName('btn-ok');
 const cancelButtons = document.getElementsByClassName('btn-cancel');
