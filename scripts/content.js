@@ -45,3 +45,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (cancelButtons.length) cancelButtons[0].click();
   }
 });
+
+window.addEventListener('load', function() {
+    const styleSheet = document.styleSheets[0];
+    styleSheet.insertRule('.tab.glossary .glossary_items .glossary_item {padding: 1px 32px !important;}');
+    styleSheet.insertRule('.tab.glossary .glossary_items .glossary_item .glossary_item-body {padding: 0 0 !important;}');
+});
